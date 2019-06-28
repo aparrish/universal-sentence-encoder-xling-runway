@@ -10,4 +10,4 @@ build_steps:
     - pip install -r requirements.txt
     - python download_models.py
     - python -m nltk.downloader punkt
-    - if_gpu: pip install tensorflow-gpu==1.13.1
+    - if_gpu: pip install tensorflow-gpu==1.12.0
