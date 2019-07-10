@@ -1,5 +1,5 @@
 import runway
-from runway.data_types import array, text, vector, category
+from runway.data_types import array, text, vector, boolean
 from sentenceencoder import UniSentenceEncXling
 from nltk import sent_tokenize
 
@@ -17,8 +17,7 @@ text and an array with the corresponding embeddings for each line.
 @runway.command(name='embed',
         inputs={
             'text': text(),
-            'tokenize_sentences': category(
-                choices=['yes', 'no'], default='yes')
+            'tokenize_sentences': boolean(default=True)
         },
         outputs={
             'sentences': array(item_type=text),
@@ -26,7 +25,7 @@ text and an array with the corresponding embeddings for each line.
         },
         description=desc)
 def embed(model, args):
-    if args['tokenize_sentences'] == 'yes':
+    if args['tokenize_sentences']:
         sentences = sent_tokenize(args['text'])
     else:
         sentences = args['text'].split("\n")
