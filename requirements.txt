@@ -3,7 +3,7 @@ astor==0.8.0
 Click==7.0
 colorcet==2.0.1
 Flask==1.0.3
-Flask-Cors==3.0.8
+Flask-Cors==3.0.9
 gast==0.2.2
 gevent==1.4.0
 greenlet==0.4.15
