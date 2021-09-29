@@ -15,7 +15,7 @@ Keras-Applications==1.0.8
 Keras-Preprocessing==1.1.0
 Markdown==3.1.1
 MarkupSafe==1.1.1
-nltk==3.4.3
+nltk==3.6.3
 numpy==1.16.4
 param==1.9.1
 Pillow==6.0.0
